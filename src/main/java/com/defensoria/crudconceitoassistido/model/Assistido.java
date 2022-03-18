@@ -1,5 +1,6 @@
 package com.defensoria.crudconceitoassistido.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -25,7 +26,8 @@ public class Assistido implements Serializable {
     @Column(name = "nome")
     private String nome;
 
-    @OneToMany(mappedBy = "assistido", cascade = CascadeType.ALL )
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "id_assistido_FK")
     private List<Contato> contatos = new ArrayList<>();
 
     @Column(name ="cep")

@@ -25,6 +25,7 @@ public class AssistidoService {
     }
 
     public Assistido criaOuAtualizaAssistido(Assistido assistido){
+        //assistido.getEndereco().setAssistido(assistido);
         return this.assistidoRepository.save(assistido);
     }
 

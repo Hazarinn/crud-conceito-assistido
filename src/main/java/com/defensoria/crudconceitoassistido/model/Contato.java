@@ -22,8 +22,8 @@ public class Contato implements Serializable {
     private Integer numero;
 
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_assistido") // representa a coluna na tabela contato
-    private Assistido assistido;
+//    @ManyToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "id_assistido") // representa a coluna na tabela contato
+//    private Assistido assistido;
 
 }
